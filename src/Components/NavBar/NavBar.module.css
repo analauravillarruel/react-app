@@ -3,3 +3,10 @@
   justify-content: space-around;
   background-color: rgb(119, 119, 223);
 }
+.navUl{
+  width: 550px;
+  display: flex;
+  list-style: none;
+  text-decoration-line: none;
+  justify-content: space-around;
+}

@@ -1,0 +1,10 @@
+.header{
+  display: flex;
+  width: auto;
+  justify-content: space-between;
+  background-color: rgb(129, 27, 27);
+}
+.h1{
+  font-size: large;
+  color:white;
+}
