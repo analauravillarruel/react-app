@@ -6,7 +6,7 @@ import {ItemDetailContainer} from './Components/ItemDetailContainer/ItemDetailCo
 
 
 
-import {CartProvider} from './Components/Context/CartContext'
+import {CartContext, CartProvider} from './Components/Context/CartContext'
 
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
           <Route path='/' element={<ItemListContainer greeting={'Bienvenidos'}/>}/>
           <Route path='/category/:categoryId' element={<ItemListContainer greeting={'Productos por categoria'}/>}/>
           <Route path='item/:itemId' element={<ItemDetailContainer/>}/>
-          <Route path='cart/:img' element={<CartProvider/>}/>
+          <Route path='cart/:img' element={<CartContext/>}/>
           <Route path='*' element={<h1>404 Not Found</h1>}/>
         </Routes>
       </CartProvider>
