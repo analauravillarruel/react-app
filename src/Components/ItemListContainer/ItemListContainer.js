@@ -21,7 +21,7 @@ export const ItemListContainer = ({greeting})=>{
     .catch(error => {
       console.error(error)
     });
-  },[catergoryId]);
+  },[categoryId]);
 
   return(
     <div>

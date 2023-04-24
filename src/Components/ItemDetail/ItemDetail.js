@@ -1,11 +1,13 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import ItemCount from "../ItemCount/ItemCount"
 import {Link} from "react-router-dom";
+import styles from './ItemDetail.module.css'
+import { CartProvider } from "../Context/CartContext";
 
 function ItemDetail({ id, name, img, category, description, price, stock }) {
   const [quantityAdded, setQuantityAdded] = useState(0);
 
-  const { addItem } = useContext(CartContext);
+  const { addItem } = useContext(CartProvider);
 
   const handledAdd = (quantity) => {
     setQuantityAdded(quantity);
@@ -19,7 +21,7 @@ function ItemDetail({ id, name, img, category, description, price, stock }) {
   };
 
   return (
-    <article className={style.article}>
+    <article className={styles.article}>
       <header>
         <h1>
           {id}
@@ -28,10 +30,10 @@ function ItemDetail({ id, name, img, category, description, price, stock }) {
           {name}
         </h2>
       </header>
-      <picture className={style.picture - img}>
+      <picture className={styles.picture - img}>
         <img src={img} alt={name} />
       </picture>
-      <section className={style.section}>
+      <section className={styles.section}>
         <p>
           {category}
         </p>
@@ -45,7 +47,7 @@ function ItemDetail({ id, name, img, category, description, price, stock }) {
           {stock}
         </p>
       </section>
-      <footer className={style.footer}>
+      <footer className={styles.footer}>
         {quantityAdded > 0 ? (
           <Link to='/cart'>Terminar mi compra</Link>
         ) : (

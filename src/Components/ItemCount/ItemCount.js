@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from './ItemCount.module.css'
 
 const ItemCount = ({ stock, initial, onAdd }) => {
   const [quantity, setQuantity] = useState(initial);
@@ -15,12 +16,12 @@ const ItemCount = ({ stock, initial, onAdd }) => {
   }
 
   return (
-    <div className={style.Counter}>
-      <div className={style.Controls}>
-        <button className={style.Button} onClick={decremnt}>-</button>
-        <span className={stye.quantity}>{quantity}</span>
+    <div className={styles.Count}>
+      <div className={styles.Controls}>
+        <button className={styles.Button} onClick={decrement}>-</button>
+        <span className={styles.quantity}>{quantity}</span>
         <button onClick={increment}>+</button>
-        <button className={style.Button} onClick={() => onAdd(quantity)} disable={!stock}>Agregar al carrito </button>
+        <button className={styles.Button} onClick={() => onAdd(quantity)} disable={!stock}>Agregar al carrito </button>
       </div>
 
     </div>
