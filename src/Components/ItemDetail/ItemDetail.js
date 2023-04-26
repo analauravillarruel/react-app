@@ -4,10 +4,10 @@ import {Link} from "react-router-dom";
 import styles from './ItemDetail.module.css'
 import { CartProvider } from "../Context/CartContext";
 
-function ItemDetail({ id, name, img, category, description, price, stock }) {
+const ItemDetail =({ id, name, img, category, description, price, stock }) => {
   const [quantityAdded, setQuantityAdded] = useState(0);
 
-  const { addItem } = useContext(CartProvider);
+  const addItem = useContext(CartProvider);
 
   const handledAdd = (quantity) => {
     setQuantityAdded(quantity);
