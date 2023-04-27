@@ -1,0 +1,7 @@
+.itemlist{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 45px;
+  background-color: rgb(250, 250, 253);
+}

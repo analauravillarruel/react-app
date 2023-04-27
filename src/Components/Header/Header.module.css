@@ -1,7 +1,8 @@
 *{
   margin: 0%;
-  
 }
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Raleway&display=swap');
+
 .header{
   display: flex;
   padding: 2%;
@@ -11,6 +12,7 @@
   background-color: rgb(180, 61, 61);
 }
 .h1{
+  font-family: 'Nothing You Could Do', cursive;
   font-size: 45px;
   color:white;
 }
